@@ -6,7 +6,7 @@
 </contextListener>
 
 <appender name="file" class="ch.qos.logback.core.FileAppender">
-    <file>log.log</file>
+    <file>logs/log.log</file>
     <encoder>
         <charset>UTF-8</charset>
         <pattern>%date %-5level %logger{0} [%file:%line] %msg%n</pattern>
@@ -20,7 +20,7 @@
     </encoder>
 </appender>
 
-<logger name="SpringTest" level="DEBUG"/>
+<logger name="xyz.grishaev" level="DEBUG"/>
 
 <root level="INFO">
     <appender-ref ref="file"/>
