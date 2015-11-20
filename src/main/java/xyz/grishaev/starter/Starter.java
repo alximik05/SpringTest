@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import xyz.grishaev.LessonsConfiguration;
+import xyz.grishaev.services.AnotherGreeting;
 import xyz.grishaev.services.GreetingService;
 
 /**
@@ -18,5 +19,7 @@ public class Starter {
         ApplicationContext context = new AnnotationConfigApplicationContext(LessonsConfiguration.class);
         GreetingService service = context.getBean(GreetingService.class);
         LOG.debug(service.sayGreeting());
+        AnotherGreeting ser = context.getBean(AnotherGreeting.class);
+        ser.print();
     }
 }
